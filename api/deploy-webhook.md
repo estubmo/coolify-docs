@@ -76,25 +76,30 @@ API request requires a `Bearer` token in `Authorization` header, which could be 
 ```bash [by uuid]
 curl -X GET \ 
   -H "Authorization: Bearer <token>" \
-  https://api.coolify.io/v1/deploy?uuid=zow8w44
+  "https://api.coolify.io/v1/deploy?uuid=zow8w44"
   
 ```
 ```bash [by tag]
 curl -X GET \ 
   -H "Authorization: Bearer <token>" \
-  https://api.coolify.io/v1/deploy?tag=tag1
+  "https://api.coolify.io/v1/deploy?tag=tag1"
+```
+```bash [by tag with force]
+curl -X GET \ 
+  -H "Authorization: Bearer <token>" \
+  "https://api.coolify.io/v1/deploy?tag=tag1&force=true"
 ```
 :::
 ::: code-group
 ```bash [multiple uuids]
 curl -X GET \ 
   -H "Authorization: Bearer <token>" \
-  https://api.coolify.io/v1/deploy?uuid=zow8w44,x8wggcg
+  "https://api.coolify.io/v1/deploy?uuid=zow8w44,x8wggcg"
 ```
 ```bash [multiple tags]
 curl -X GET \ 
   -H "Authorization: Bearer <token>" \
-  https://api.coolify.io/v1/deploy?tag=tag1,tag2
+  "https://api.coolify.io/v1/deploy?tag=tag1,tag2"
 ```
 :::
 
