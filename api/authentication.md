@@ -1,4 +1,5 @@
 ---
+aside: false  
 head:
   - - meta
     - name: description
@@ -41,7 +42,7 @@ head:
       content: https://cdn.coollabs.io/assets/coolify/og-image-docs.png
 ---
 
-# Authentication
+<!-- # Authentication
 
 API request requires a `Bearer` token in `Authorization` header, which could be generated from the UI.
 
@@ -60,3 +61,35 @@ Tokens are scoped for your currently active Team. If you switch to another team,
 ## Revoking a Token
 
 Go to `Security` menu -> API tokens and simple click `Revoke` button for the token you want to revoke.
+ -->
+
+<script setup>
+  import {DividePage} from 'vitepress-theme-api';
+</script>
+<style >
+@import './node_modules/vitepress-theme-api/dist/style.css'
+</style>
+<DividePage :top="63">
+<template #left>
+
+# Coolify API
+API request requires a `Bearer` token in `Authorization` header, which could be generated from the UI.
+
+## Generate a Token
+1. Go to `Security` menu -> `API tokens`.
+2. Define a name for your token and click `Create New Token`.
+
+::: tip
+You will see the token once, so make sure to copy it and store it in a safe place.
+:::
+
+
+</template>
+<template #right>
+
+::: info Sample token
+3|WaobqX9tJQshKPuQFHsyApxuOOggg4wOfvGc9xa233c376d7
+:::
+
+</template>
+</DividePage>

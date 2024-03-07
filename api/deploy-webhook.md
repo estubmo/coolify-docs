@@ -1,4 +1,5 @@
 ---
+aside: false
 head:
   - - meta
     - name: description
@@ -41,50 +42,111 @@ head:
       content: https://cdn.coollabs.io/assets/coolify/og-image-docs.png
 ---
 
-# Deploy Webhooks
 
-You can call this endpoint to deploy any resource(s) by `uuid` or `tag`.
+<script setup>
+  import {DividePage} from 'vitepress-theme-api';
+</script>
+<style >
+@import './node_modules/vitepress-theme-api/dist/style.css'
+</style>
+<DividePage :top=100>
+<template #left>
 
-Tags should be defined on the UI before using them in the API.
+# Deploy webhook
+Deploy a resource programmatically.
 
+## Authorization
+API request requires a `Bearer` token in `Authorization` header, which could be generated from the UI, more info [here](/api/authentication).
 
-## Endpoint
-
-GET `<instanceUrl>/api/v1/deploy?uuid=<UUID>&force=false`
-
-GET `<instanceUrl>/api/v1/deploy?tag=<tag_name>&force=false`
-
-:::tip
-`uuid` can be a list of comma-separated UUIDs, e.g. `uuid=uuid1,uuid2,uuid3`.
-
-`tag` can be a list of comma-separated tags, e.g. `tag=tag1,tag2,tag2`.
-:::
-
-## Examples
-
-With `uuid`:
-- `<instanceUrl>/api/v1/deploy?uuid=hg04w48&force=false`
-- `<instanceUrl>/api/v1/deploy?uuid=hg04w48,hjh43ig,23iigj4,uh4238f&force=false`
-  
-With `tag`:
-- `<instanceUrl>/api/v1/deploy?tag=tag1&force=false`
-- `<instanceUrl>/api/v1/deploy?tag=tag1,tag2,tag3&force=false`
-
-Curl:
-
-```bash
-# With UUID
-curl -H "Authorization: Bearer <token>" https://app.coolify.io/api/v1/deploy?uuid=hg04w48
-curl -H "Authorization: Bearer <token>" https://app.coolify.io/api/v1/deploy?uuid=hg04w48,hjh43ig,23iigj4,uh4238f
-
-# With Tag
-curl -H "Authorization: Bearer <token>" https://app.coolify.io/api/v1/deploy?tag=api
-curl -H "Authorization: Bearer <token>" https://app.coolify.io/api/v1/deploy?tag=api,web
-```
 
 ## Query Parameters
-You could deploy by `uuid` or by `tag`;
 
-- `uuid`: The UUID of the resource(s) you want to deploy. 
-- `tag`: The name of the tag(s) you want to deploy.
-- `force`: If set to `true`, the deployment won't use cache. Default is `false`.
+| Name    | Type      | Description                                               |
+| ------- | --------- | --------------------------------------------------------- |
+| `uuid`  | `string`  | Deployable resource UUID. Could be comman separated list. |
+| `tag`   | `string`  | Deployable tags. Could be comman separated list           |
+| `force` | `boolean` | Deploy without cache.                                     |
+
+</template>
+<template #right>
+
+### Request
+
+::: code-group
+```bash [by uuid]
+curl -X GET \ 
+  -H "Authorization: Bearer <token>" \
+  https://api.coolify.io/v1/deploy?uuid=zow8w44
+  
+```
+```bash [by tag]
+curl -X GET \ 
+  -H "Authorization: Bearer <token>" \
+  https://api.coolify.io/v1/deploy?tag=tag1
+```
+:::
+::: code-group
+```bash [multiple uuids]
+curl -X GET \ 
+  -H "Authorization: Bearer <token>" \
+  https://api.coolify.io/v1/deploy?uuid=zow8w44,x8wggcg
+```
+```bash [multiple tags]
+curl -X GET \ 
+  -H "Authorization: Bearer <token>" \
+  https://api.coolify.io/v1/deploy?tag=tag1,tag2
+```
+:::
+
+### Response (200)
+
+::: code-group
+
+```json [by uuid/tag]
+{
+  "message": [
+    "Application Test1 deployment queued.",
+  ],
+  "details": [
+    {
+      "resource_uuid": "zow8w44",
+      "deployment_uuid": "ncok04w"
+    }
+  ]
+}
+```
+```json [multiple uuid/tag]
+{
+  "message": [
+    "Application Test1 deployment queued.",
+    "Application Test2 deployment queued.",
+  ],
+  "details": [
+    {
+      "resource_uuid": "zow8w44",
+      "deployment_uuid": "ncok04w"
+    },
+    {
+      "resource_uuid": "x8wggcg",
+      "deployment_uuid": "s4ss0gs"
+    }
+  ]
+}
+```
+:::
+
+### Response (404)
+
+::: code-group
+
+```json
+{
+  "error": "No resources found.",
+  "docs": "https://coolify.io/docs/api/deploy-webhook"
+}
+```
+:::
+
+
+</template>
+</DividePage>
