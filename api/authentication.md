@@ -1,12 +1,12 @@
 ---
-aside: false  
+aside: false
 head:
   - - meta
     - name: description
       content: Coolify Documentation
   - - meta
     - name: keywords
-      content: coolify self-hosting docker kubernetes vercel netlify heroku render digitalocean aws gcp azure
+      content: coolify self-hosting api documentation
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -21,7 +21,7 @@ head:
       content: Self-hosting with superpowers.
   - - meta
     - name: twitter:image
-      content: https://cdn.coollabs.io/assets/coolify/og-image-docs.png
+      content: https://cdn.coollabs.io/assets/coolify/api-og-image.png
   - - meta
     - property: og:type
       content: website
@@ -39,30 +39,8 @@ head:
       content: Coolify
   - - meta
     - property: og:image
-      content: https://cdn.coollabs.io/assets/coolify/og-image-docs.png
+      content: https://cdn.coollabs.io/assets/coolify/api-og-image.png
 ---
-
-<!-- # Authentication
-
-API request requires a `Bearer` token in `Authorization` header, which could be generated from the UI.
-
-## Generate a Token
-
-Go to `Security` menu -> `API tokens`.
-
-Define a name for your token and click `Create New Token`.
-
-You will see the token once, so make sure to copy it and store it in a safe place.
-
-### Scope
-
-Tokens are scoped for your currently active Team. If you switch to another team, you will see the tokens for that team only.
-
-## Revoking a Token
-
-Go to `Security` menu -> API tokens and simple click `Revoke` button for the token you want to revoke.
- -->
-
 <script setup>
   import {DividePage} from 'vitepress-theme-api';
 </script>

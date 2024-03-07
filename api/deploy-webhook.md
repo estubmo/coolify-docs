@@ -6,7 +6,7 @@ head:
       content: Coolify Documentation
   - - meta
     - name: keywords
-      content: coolify self-hosting docker kubernetes vercel netlify heroku render digitalocean aws gcp azure
+      content: coolify self-hosting api documentation
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -21,7 +21,7 @@ head:
       content: Self-hosting with superpowers.
   - - meta
     - name: twitter:image
-      content: https://cdn.coollabs.io/assets/coolify/og-image-docs.png
+      content: https://cdn.coollabs.io/assets/coolify/api-og-image.png
   - - meta
     - property: og:type
       content: website
@@ -39,7 +39,7 @@ head:
       content: Coolify
   - - meta
     - property: og:image
-      content: https://cdn.coollabs.io/assets/coolify/og-image-docs.png
+      content: https://cdn.coollabs.io/assets/coolify/api-og-image.png
 ---
 
 
