@@ -103,11 +103,11 @@ curl -X GET \
 ```
 :::
 
-### Response (200)
+### Response
 
 ::: code-group
 
-```json [by uuid/tag]
+```json [200 (by uuid/tag)]
 {
   "message": [
     "Application Test1 deployment queued.",
@@ -120,7 +120,7 @@ curl -X GET \
   ]
 }
 ```
-```json [multiple uuid/tag]
+```json [200 (multiple uuid/tag)]
 {
   "message": [
     "Application Test1 deployment queued.",
@@ -138,13 +138,7 @@ curl -X GET \
   ]
 }
 ```
-:::
-
-### Response (404)
-
-::: code-group
-
-```json
+```json [404]
 {
   "error": "No resources found.",
   "docs": "https://coolify.io/docs/api/deploy-webhook"
