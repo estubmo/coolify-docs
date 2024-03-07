@@ -52,12 +52,13 @@ head:
 <DividePage :top=100>
 <template #left>
 
-# Deploy webhook
+# Deploy
 Deploy a resource programmatically.
 
 ## Authorization
 API request requires a `Bearer` token in `Authorization` header, which could be generated from the UI, more info [here](/api/authentication).
 
+> The token will only be able to access resources that are owned by the team that the token is scoped to.
 
 ## Query Parameters
 > `*` required.
@@ -68,7 +69,7 @@ API request requires a `Bearer` token in `Authorization` header, which could be 
 | ------- | ---------- | -------------------------------------------------------- |
 | `uuid*` | `string`   | Deployable resource UUID. Could be comma separated list. |
 | `tag*`  | `string`   | Deployable tags. Could be comma separated list.          |
-| `force` | `boolean ` | Deploy without cache. `(default=false)  `                   |
+| `force` | `boolean ` | Deploy without cache. `(default=false)  `                |
 
 
 </template>

@@ -53,6 +53,7 @@ head:
 # Coolify API
 API request requires a `Bearer` token in `Authorization` header, which could be generated from the UI.
 
+
 ## Generate a Token
 1. Go to `Security` menu -> `API tokens`.
 2. Define a name for your token and click `Create New Token`.
@@ -61,6 +62,8 @@ API request requires a `Bearer` token in `Authorization` header, which could be 
 You will see the token once, so make sure to copy it and store it in a safe place.
 :::
 
+## Scope
+The token will only be able to access resources that are owned by the team that the token is scoped to.
 
 </template>
 <template #right>

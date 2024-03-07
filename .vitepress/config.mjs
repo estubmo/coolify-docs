@@ -193,6 +193,31 @@ const config = {
               text: "Deploy Webhook",
               link: "/api/deploy-webhook",
             },
+            {
+              text: "Team",
+              items: [
+                {
+                  text: "Teams",
+                  link: "/api/teams",
+                },
+                {
+                  text: "Current Team",
+                  link: "/api/current-team",
+                },
+                {
+                  text: "Current Team's Members",
+                  link: "/api/current-team-members",
+                },
+                {
+                  text: "Team By ID",
+                  link: "/api/team-by-id",
+                },
+                {
+                  text: "Members By Team ID",
+                  link: "/api/team-by-id-members",
+                },
+              ]
+            },
           ],
         },
       ]
