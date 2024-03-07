@@ -60,12 +60,16 @@ API request requires a `Bearer` token in `Authorization` header, which could be 
 
 
 ## Query Parameters
+> `*` required.
+> 
+> `uuid` and `tag` are mutually exclusive.
 
-| Name    | Type      | Description                                              |
-| ------- | --------- | -------------------------------------------------------- |
-| `uuid`  | `string`  | Deployable resource UUID. Could be comma separated list. |
-| `tag`   | `string`  | Deployable tags. Could be comma separated list.          |
-| `force` | `boolean` | Deploy without cache.                                    |
+| Name    | Type       | Description                                              |
+| ------- | ---------- | -------------------------------------------------------- |
+| `uuid*` | `string`   | Deployable resource UUID. Could be comma separated list. |
+| `tag*`  | `string`   | Deployable tags. Could be comma separated list.          |
+| `force` | `boolean ` | Deploy without cache. `(default=false)  `                   |
+
 
 </template>
 <template #right>
