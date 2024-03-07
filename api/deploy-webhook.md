@@ -63,8 +63,8 @@ API request requires a `Bearer` token in `Authorization` header, which could be 
 
 | Name    | Type      | Description                                               |
 | ------- | --------- | --------------------------------------------------------- |
-| `uuid`  | `string`  | Deployable resource UUID. Could be comman separated list. |
-| `tag`   | `string`  | Deployable tags. Could be comman separated list           |
+| `uuid`  | `string`  | Deployable resource UUID. Could be comma separated list. |
+| `tag`   | `string`  | Deployable tags. Could be comma separated list           |
 | `force` | `boolean` | Deploy without cache.                                     |
 
 </template>
