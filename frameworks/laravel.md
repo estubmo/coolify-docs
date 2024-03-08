@@ -52,13 +52,25 @@ Example repository [here](https://github.com/coollabsio/coolify-examples/tree/ma
 - Set `Build Pack` to `nixpacks`
 - Set `APP_KEY`
 - Set `Ports Exposes` to `80` 
-- 
+
 :::tip
 If you configured your application before version beta.184 and set the `NIXPACKS_PHP_ROOT_DIR` and `NIXPACKS_PHP_FALLBACK_PATH` environment variables, you need to remove them.
 :::
 
 ### Other components
-If you application needs a database or redis, you can simply create them before in the Coolify's dashboard.
+If your application needs a database or Redis, you can simply create them beforehand in the Coolify dashboard.
 
-You will get the connection strings which you can use in your application.
+You will receive the connection strings which you can use in your application and set them as environment variables:
 
+```bash
+DB_CONNECTION=mysql
+DB_HOST=<DB_HOST>
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
+
+REDIS_HOST=<REDIS_HOST>
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+```
