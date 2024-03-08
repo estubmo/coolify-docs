@@ -45,11 +45,13 @@ head:
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling.
 
-Example repository [here](https://github.com/coollabsio/coolify-examples/tree/laravel).
+Example repository [here](https://github.com/coollabsio/coolify-examples/tree/main/laravel).
 
 ## Requirements
 
-All you need to do is to set `Ports Exposes` field to `80`.
+- Set `Build Pack` to `nixpacks`
+- Set `APP_KEY`
+- Set `Ports Exposes` to `80` 
 
 :::tip
 If you configured your application before version beta.184 and set the `NIXPACKS_PHP_ROOT_DIR` and `NIXPACKS_PHP_FALLBACK_PATH` environment variables, you need to remove them.
