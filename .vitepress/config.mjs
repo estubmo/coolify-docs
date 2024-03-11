@@ -120,6 +120,7 @@ const config = {
                 { text: "Firewall", link: "/server/firewall" },
                 { text: "OpenSSH", link: "/server/openssh" },
                 { text: "Oracle ARM Server", link: "/server/oracle-arm-server" },
+                { text: "Switching Proxies", link: "/server/switching-proxies" },
               ]
             },
             {
