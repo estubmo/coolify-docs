@@ -53,4 +53,4 @@ If you don't have `caddy_*` or `traefik_*` labels:
 - `For Services`: simply save the service - it will automatically add required labels.
 :::
 
-2. You need to redeploy your service so that the new labels will be applied.
+2. You need to restart your service so that the new labels will be applied.
