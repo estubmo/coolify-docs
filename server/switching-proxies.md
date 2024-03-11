@@ -49,8 +49,10 @@ Before you switch proxies and if you have an application that was created before
 
 :::tip
 If you don't have `caddy_*` or `traefik_*` labels:
+1. Automatically: A restart of your resource will add the missing labels.
+2. Manually:
 - `For Applications`: click on the `Reset to Coolify Default Labels` button.
 - `For Services`: simply save the service - it will automatically add required labels.
 :::
 
-2. You need to restart your service so that the new labels will be applied.
+1. You need to restart your service so that the new labels will be applied.
