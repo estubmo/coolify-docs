@@ -112,5 +112,5 @@ curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
 
 1. Navigate to your Coolify instance, as in the example: `https://app.coolify.io`.
 2. Login with the root user (the first user you created after installation).
-3. Open another tab/window and navigate to `https://app.coolify.io/api/v1/test/realtime`. On the other tab (opened in point 2), you should see a notification about the test event.
+3. Open another tab/window and navigate to `https://app.coolify.io/realtime`. On the other tab (opened in point 2), you should see a notification about the test event.
 4. If you know what are you doing, you can check the network tab as well. Search for a websocket connection.
