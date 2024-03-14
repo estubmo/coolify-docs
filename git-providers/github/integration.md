@@ -76,7 +76,7 @@ You can use private repositories with the GitHub App integration. You will get f
 :::
 
 2. Create a new resource and select the `Private Repository (with deploy key)`
-3. Add your repository URL to the input field, for example: `git@github.com/coollabsio/coolify-examples.git`
+3. Add your repository URL to the input field, for example: `git@github.com:coollabsio/coolify-examples.git`
 
 :::tip
 You need to use the SSH URL, so the one that starts with `git@`.
