@@ -11,7 +11,7 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:site
-      content: '@coolifyio'
+      content: "@coolifyio"
   - - meta
     - name: twitter:title
       content: Coolify Documentation
@@ -40,18 +40,19 @@ head:
     - property: og:image
       content: https://cdn.coollabs.io/assets/coolify/og-image-docs.png
 ---
-# Upgrade
+# Switching Proxies
 
-By default Coolify upgrades itself automatically. You can turn it off in the `Settings` menu.
+Since `beta.237`, we have added support for Caddy and Traefik as proxies. You can switch between them at any time.
 
-## Manually Upgrade
+Before you switch proxies and if you have an application that was created before `beta.237`, you need to make sure of the following:
+1. You must have `caddy_*` or `traefik_*` labels on your resources.
 
-```bash
-curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
-```
+:::tip
+If you don't have `caddy_*` or `traefik_*` labels:
+1. Automatically: A restart of your resource will add the missing labels.
+2. Manually:
+- `For Applications`: click on the `Reset to Coolify Default Labels` button.
+- `For Services`: simply save the service - it will automatically add required labels.
+:::
 
-Or if you prefer to use a specific version:
-
-```bash
-curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash -s 4.0.0-beta.154
-```
+2. You need to restart your service so that the new labels will be applied.

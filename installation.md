@@ -114,8 +114,8 @@ The script will do the following on your operating system:
 - Creates an SSH key for Coolify to be able to manage this server from itself at `/data/coolify/ssh/keys/id.root@host.docker.internal`.
 - Install dockerized Coolify.
 
-## Manually Installation
-If you want to manually install Coolify on a system where Docker Engine available, follow the steps below.
+## Manual Installation
+If you want to manually install Coolify on a system where Docker Engine is available, follow the steps below.
 
 1. Install Docker Engine (24+) - [official instructions](https://docs.docker.com/engine/install/#server).
    
