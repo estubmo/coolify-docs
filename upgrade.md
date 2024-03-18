@@ -42,7 +42,7 @@ head:
 ---
 # Upgrade
 
-By default Coolify upgrade itself automatically. You can turn it off in the `Settings` menu.
+By default Coolify upgrades itself automatically. You can turn it off in the `Settings` menu.
 
 ## Manually Upgrade
 
